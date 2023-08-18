@@ -8,7 +8,7 @@ $(document).ready(function () {
             for (var i = 0; i < data.products.length; i++) {
                 var 템플릿 =
                     `<div draggable="true" class="card" style="width: 14rem;" data-id="${data.products[i].id}">
-                    <img src="img/${data.products[i].photo}" class="card-img-top" width="100%" height="150px;">
+                    <img src="img/${data.products[i].photo}" class="card-img-top" width="100%" height="150px" draggable="false";>
                     <div class="card-body">
                         <h5 class="card-title">${data.products[i].title}</h5>
                         <span>${data.products[i].brand}</span>
@@ -34,7 +34,7 @@ $(document).ready(function () {
                         // 템플릿 재정의
                         var 템플릿 =
                             `<div draggable="true" class="card" style="width: 14rem;" data-id="${data.products[i].id}">
-                            <img src="img/${data.products[i].photo}" class="card-img-top" width="100%" height="150px;">
+                            <img src="img/${data.products[i].photo}" class="card-img-top" width="100%" height="150px" draggable="false";>
                             <div class="card-body">
                                 <h5 class="card-title">${titleYellow}</h5>
                                 <span>${brandYellow}</span>
