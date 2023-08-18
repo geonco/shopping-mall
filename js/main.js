@@ -4,7 +4,7 @@ $(document).ready(function () {
         dataType: 'json',
         success: function (data) {
             
-            // 카드 만들기
+            // 카드 생성
             for (var i = 0; i < data.products.length; i++) {
                 var 템플릿 =
                     `<div draggable="true" class="card" style="width: 14rem;" data-id="${data.products[i].id}">
@@ -46,9 +46,10 @@ $(document).ready(function () {
                     }
                 }
             });
+
             // drag 시작
             $('.card').on('dragstart', function (e) {
-                e.originalEvent.dataTransfer.setData('id', e.target.dataset.id);
+                e.originalEvent.dataTransfer.setData('id', e.target.dataset.id);    // 데이터 숨겨두기
                 console.log('dragstart');
             });
 
@@ -167,7 +168,6 @@ $(document).ready(function () {
                         new_val++;
 
                         $('.black-bg').children().eq(insertIndex).children('.card-body').children('input').val(new_val);    // 장바구니에 있는 해당되는 카드의 val 값을 변경
-                        // $('.black-bg').children().eq(insertIndex).children('.card-body').children('input').attr("value", new_val);    // 장바구니에 있는 해당되는 카드의 val 값을 변경
                     }
 
                     // 중복된 카드가 없을 때

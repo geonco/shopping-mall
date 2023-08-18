@@ -5,9 +5,6 @@
     display: flex;
     align-items: center;
 }
-.j-c {
-    justify-content: initial;
-}
 .main-bg {
     height: 2000px;
     background: rgb(236, 235, 235);
@@ -19,7 +16,6 @@
     margin: auto;
 }
 .card-bg {
-    /* width: 100%; */
     margin: auto;
     padding: 20px;
     gap: 20px;
